@@ -1,0 +1,62 @@
+/* General Styles */
+body {
+  overflow: hidden; /* Hide scrollbar and make the page non-scrollable */
+  background: linear-gradient(135deg, #f06292, #4a148c); /* Consistent gradient background */
+  font-family: Arial, sans-serif;
+  height: 100vh; /* Set the height to 100% of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4a148c; /* Consistent pink background */
+  padding: 20px 10px;
+  color: white;
+}
+
+.header .logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  flex: 1; /* Allow nav to grow and take space between logo and right edge */
+  display: flex;
+  justify-content: center; /* Center menu horizontally */
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center menu items */
+}
+
+li {
+  display: inline;
+  margin: 0 10px; /* Space between menu items */
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+a.active {
+  font-weight: bold;
+  border-bottom: 2px solid white; /* Underline for active link */
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 0.7); /* Light white on hover */
+}

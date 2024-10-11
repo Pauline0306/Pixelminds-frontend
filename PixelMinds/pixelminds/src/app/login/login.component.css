@@ -1,0 +1,139 @@
+header {
+  background-color: #4a148c; /* Purple background */
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #e91e63;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: white;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: linear-gradient(135deg, #f06292, #4a148c);
+  background-size: cover;
+  background-position: center; 
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  width: 100%; /* Full width on smaller screens */
+  max-width: 500px; /* Maximum width for larger screens */
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+h3 {
+  color: #fff; /* White color for the "Login" heading */
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+h5 {
+  color: #fff; /* White color for the "Welcome back!" text */
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 1rem; /* Space between form groups */
+}
+
+.form-group label {
+  color: #fff; /* White color for labels */
+  display: block; /* Ensures labels are on their own line */
+  margin-bottom: 0.5rem; /* Space between label and control */
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white input background */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px;
+  padding: 0.5rem 1rem; /* Increased padding for better touch */
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-left: 0; /* Remove left margin to align with label */
+  width: 100%; /* Adjust to fill container width */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Lighter white for placeholder text */
+}
+
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+  box-shadow: none;
+}
+
+.btn {
+  background-color: #f06292; /* Pink background color */
+  color: #fff; /* White text */
+  border-radius: 30px;
+  padding: 12px 25px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  width: 100%; /* Full width button */
+}
+
+.btn:hover {
+  background-color: #d81b60; /* Darker pink on hover */
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+p.text-muted {
+  color: rgba(255, 255, 255, 0.7); /* Light white for text-muted class */
+}
+
+a {
+  color: #f06292; /* Pink color for links */
+}
+
+a:hover {
+  color: #d81b60; /* Darker pink on hover */
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+  #login-container {
+    height: auto; /* Allow height to adjust */
+    padding: 20px; /* Add padding on smaller screens */
+  }
+  
+  .card {
+    margin: 10px; /* Margin around card */
+    padding: 1rem; /* Reduced padding */
+  }
+
+  h3 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  h5 {
+    font-size: 1.25rem; /* Smaller subheading on mobile */
+  }
+}

@@ -1,0 +1,61 @@
+<div class="header">
+    <a class="logo">PixelMinds</a>
+    <div class="header-right">
+        <div class="search-container">
+            <input
+              type="text"
+              placeholder="Search by author's name..."
+              [(ngModel)]="searchTerm"
+              (input)="filterPosts()">
+        </div>
+        <button routerLink="/login">Login / Signup</button>
+    </div>
+</div>
+
+
+        <div class="about-desc">
+            <img src="assets/senti.jpg" alt="Senti">
+            <div class="overlay-text">
+                <h2>Welcome to PixelMinds</h2>
+                <p>
+                    Welcome to PixelMinds, the ultimate platform for writers, thinkers, and creators to share their stories, ideas, and insights with the world. At PixelMinds, we believe that every voice matters and every story deserves to be heard. Our user-friendly interface and powerful tools make it easy for you to craft compelling blog posts, connect with a community of like-minded individuals, and grow your audience.
+                </p>
+            </div>
+        </div>
+        
+
+
+    <div class="feed-container">
+        <div class="feed-posts">
+            <div class="feed-item" *ngFor="let post of filteredPosts">
+                <img src="assets/images/keep.jpg" alt="Post Image">
+                <div class="feed-holder">
+                    <div class="feed-header">
+                        <div class="author-info">
+                            <div class="profile-pic-container">
+                                <!-- Profile picture logic if needed -->
+                            </div>
+                            <p class="fullname">{{ post.user_fullname }}</p>
+                            <p class="date">{{ post.created_at | date : "short" }}</p>
+                        </div>
+                    </div>
+                    <div class="feed-body">
+                        <p class="post-title">{{ post.title }}</p>
+                        <hr />
+                        <p class="post-content" [innerHTML]="truncateText(post.content, 100)"></p>
+                    </div>
+                </div>
+                <button class="read-more-button" (click)="openModal(post)">Read More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for displaying the full post content -->
+    <div *ngIf="isVisible" class="modal">
+        <div class="modal-content">
+            <span class="close-button" (click)="closeModal()">&times;</span>
+            <h2 [style.color]="'#E91E63'">{{ selectedPost?.title }}</h2>
+            <p [innerHTML]="selectedPost?.content"></p>
+        </div>
+    </div>
+

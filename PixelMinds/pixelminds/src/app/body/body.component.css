@@ -1,0 +1,24 @@
+.body {
+  width: calc(100% - 5rem);
+  height: 100vh;
+  margin-left: 5rem;
+  z-index: 0;
+  position: relative;
+  top: 0;
+  transition: all 0.5s ease;
+  background: radial-gradient(590px at 8.2% 13.8%, rgb(31, 202, 117) 0%, rgb(105, 175, 148) 90%);
+  background-size: cover; /* This ensures the image covers the entire background */
+  background-position: center; /* This centers the image */
+  padding: 3rem;
+}
+
+
+.body-trimmed {
+  width: calc(100% - 16.5625rem);
+  margin-left: 16.5625rem;
+}
+
+.body-md-screen {
+  width: calc(100% - 5rem);
+  margin-left: 5rem;
+}

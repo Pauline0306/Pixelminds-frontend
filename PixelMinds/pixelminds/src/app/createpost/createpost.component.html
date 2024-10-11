@@ -1,0 +1,73 @@
+<app-header></app-header>
+
+<!-- layout.component.html -->
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+<div id="container" class="shadow">
+  <div id="header">
+    <div class="title">
+      <h3 style="font-family: Georgia, serif;">Create New Post</h3>
+    </div>
+    <div class="icon">
+      <i class="fal fa-times close-icon align-self-baseline" (click)="authService.showModal = false"></i>
+    </div>
+  </div>
+  <hr />
+  <div id="in-div">
+    <div id="content">
+      <div class="create-post-title">
+        <p>
+        <!--<strong>{{ userProfile.fullname }}</strong>-->
+        </p>
+      </div>
+      <div class="create-post-form-wrapper">
+        <form class="create-post-form" (ngSubmit)="createPost()">
+          <!-- Post Title -->
+          <div class="form-group">
+            <input
+              type="text"
+              autocomplete="off"
+              id="posttitle"
+              required
+              class="form-control"
+              placeholder="Title"
+              name="posttitle"
+              [(ngModel)]="postTitle"
+            />
+          </div>
+
+          <!-- Post Content -->
+          <div class="form-group">
+            <quill-editor
+              [(ngModel)]="postContent"
+              [modules]="editorModules"
+              [required]="true"
+              class="form-control"
+              name="postcontent"
+            ></quill-editor>
+          </div>
+
+
+          
+          <!-- Photo Upload -->
+          <div class="form-group">
+            <input
+              type="file"
+              id="postImage"
+              class="form-control"
+              (change)="onFileSelected($event)"
+              placeholder="Upload Image"
+              accept="image/*"
+            />
+          </div>
+
+
+          <!-- Submit Button -->
+          <div class="form-btn">
+            <button class="btn btn-primary" type="submit">Publish</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

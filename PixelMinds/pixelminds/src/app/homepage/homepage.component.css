@@ -1,0 +1,328 @@
+/* General Styles */
+body {
+  overflow: hidden; /* Hide scrollbar and make the page non-scrollable */
+  background: linear-gradient(135deg, #f06292, #4a148c); /* Consistent gradient background */
+  font-family: Arial, sans-serif;
+  height: 100vh; /* Set the height to 100% of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4a148c; /* Consistent pink background */
+  padding: 20px 10px;
+  color: white;
+}
+
+.header .logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.search-container input[type="text"] {
+  width: 250px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+
+
+.header-right button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #f06292; /* Pink background */
+  color: white;
+  border: 2px solid #f06292; /* Border to define the button */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-right button:hover {
+  background-color: #d81b60; /* Darker pink on hover */
+  border-color: #d81b60;
+}
+
+.header-right button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 140, 140, 0.5);
+
+}
+
+.about-desc img {
+  width: 100%;                /* Make the image take up the full width of its container */
+  height: 400px;              /* Set a fixed height to make the image taller */
+  object-fit: cover;          /* Ensures the image covers the area without distortion */
+  border-radius: 8px;         /* Maintain existing rounded corners */
+  display: block;             /* Allows margin auto to center the image */
+  margin: 20px 0;             /* Add vertical margins for spacing */
+}
+
+/* About Desc Container */
+.about-desc {
+  position: relative;          /* Establishes a positioning context for overlay-text */
+  width: 100%;                 /* Full width of the parent container */
+  height: 400px;               /* Fixed height for the image */
+  margin: 20px 0;              /* Vertical spacing */
+  border-radius: 8px;          /* Rounded corners */
+  overflow: hidden;            /* Ensures content doesn't spill out */
+}
+
+/* Image Styling */
+.about-desc img {
+  width: 100%;                 /* Full width */
+  height: 100%;                /* Full height */
+  object-fit: cover;           /* Scales the image to cover the container */
+  border-radius: 8px;          /* Rounded corners */
+  display: block;              /* Removes bottom whitespace */
+}
+
+/* Overlay Text Container */
+.overlay-text {
+  position: absolute;          /* Positions the container over the image */
+  top: 50%;                    /* Vertically centers the container */
+  left: 50%;                   /* Horizontally centers the container */
+  transform: translate(-50%, -50%); /* Adjusts the position to center */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+  color: #fff;                 /* White text color */
+  padding: 20px 25px;          /* Padding around the text */
+  border-radius: 8px;          /* Rounded corners */
+  text-align: center;          /* Center-aligns text */
+  max-width: 90%;              /* Ensures the container doesn't exceed 90% width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: adds depth */
+}
+
+/* Heading Styling */
+.overlay-text h2 {
+  margin: 0 0 15px 0;          /* Top margin 0, bottom margin 15px */
+  font-size: 2rem;             /* Larger font size for prominence */
+  line-height: 1.2;            /* Tight line height */
+}
+
+/* Paragraph Styling */
+.overlay-text p {
+  margin: 0;                    /* Removes default margins */
+  font-size: 1.1rem;            /* Readable font size */
+  line-height: 1.6;             /* Improved readability */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-desc {
+      height: 300px;           /* Reduced height for smaller screens */
+  }
+
+  .overlay-text {
+      padding: 15px 20px;      /* Reduced padding */
+      max-width: 95%;          /* Slightly wider on smaller screens */
+  }
+
+  .overlay-text h2 {
+      font-size: 1.8rem;       /* Slightly smaller heading */
+      margin-bottom: 12px;     /* Reduced bottom margin */
+  }
+
+  .overlay-text p {
+      font-size: 1rem;         /* Slightly smaller paragraph */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-desc {
+      height: 250px;           /* Further reduced height for mobile devices */
+  }
+
+  .overlay-text {
+      padding: 10px 15px;      /* Less padding */
+      max-width: 100%;         /* Full width on very small screens */
+  }
+
+  .overlay-text h2 {
+      font-size: 1.5rem;       /* Smaller heading */
+      margin-bottom: 10px;     /* Reduced bottom margin */
+  }
+
+  .overlay-text p {
+      font-size: 0.95rem;      /* Smaller paragraph */
+  }
+}
+
+
+/* Feed Container Styles */
+.feed-container {
+  background: linear-gradient(135deg, #f06292, #4a148c); /* Matching gradient background */
+  margin: 1rem 0;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+}
+
+.feed-posts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feed-item {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feed-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.fullname, #fullname {
+  color: black; /* White color for author name */
+}
+
+.date, #date {
+  font-size: 0.9rem;
+  color: black; 
+}
+
+.post-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fff; /* White color for title */
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.post-content, .feed-body .post-content {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7); /* Light white for post content */
+  font-family: Arial, sans-serif;
+}
+
+/* Button Styles */
+.read-more-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #f06292; /* Matching pink background */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(255, 182, 193, 0.4); /* Silky pink shadow */
+}
+
+.read-more-button:hover {
+  background-color: #d81b60; /* Darker pink on hover */
+  transform: scale(1.05);
+}
+
+.read-more-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 140, 140, 0.5);
+}
+
+.read-more-button:active {
+  background-color: #ff4d4d; /* Slightly darker pink on click */
+  transform: scale(1);
+}
+
+/* Modal Overlay */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.3); /* Darker overlay for focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background: linear-gradient(135deg, #f06292, #4a148c); /* Matching modal background */
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 900px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.4);
+  transition: transform 0.3s ease-in-out;
+  transform: scale(0.9); /* Initial scale for entrance effect */
+}
+
+/* Modal Close Button */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #ff4d4d; /* Red color for close button */
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #ff2d2d; /* Darker red on hover */
+}
+
+/* Modal Header */
+.modal-content h2 {
+  color: #ff4d4d; /* Matching header color */
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Modal Body */
+.modal-content p {
+  font-size: 1rem;
+  color: #333; /* Darker text color for readability */
+  line-height: 1.6; /* Increased line height for better readability */
+  margin-bottom: 1rem;
+}

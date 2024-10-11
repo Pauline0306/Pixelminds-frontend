@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="feed-container">
+  <div class="feed-posts">
+      <div class="feed-item" *ngFor="let post of filteredPosts">
+          <img src="assets/keep.jpg" alt="Post Image">
+          <div class="feed-holder">
+              <div class="feed-header">
+                  <div class="author-info">
+                      <div class="profile-pic-container">
+                          <!-- Profile picture logic if needed -->
+                      </div>
+                      <p class="fullname">{{ post.user_fullname }}</p>
+                      <p class="date">{{ post.created_at | date : "short" }}</p>
+                  </div>
+              </div>
+              <div class="feed-body">
+                  <p class="post-title">{{ post.title }}</p>
+                  <hr />
+                  <p class="post-content" [innerHTML]="truncateText(post.content, 100)"></p>
+              </div>
+          </div>
+          <button class="read-more-button" (click)="openModal(post)">Read More</button>
+      </div>
+  </div>
+</div>
+
+
+<!-- Modal for displaying the full post content -->
+<div *ngIf="isVisible" class="modal">
+  <div class="modal-content">
+    <span class="close-button" (click)="closeModal()">&times;</span>
+    <h2 [style.color]="'#4f3b78'">{{ selectedPost?.title }}</h2>
+    <p [innerHTML]="selectedPost?.content"></p>
+  </div>
+</div>

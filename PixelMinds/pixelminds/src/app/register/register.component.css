@@ -1,0 +1,155 @@
+/* General body styling */
+body {
+    margin-top: 20px;
+    background: #fce4ec; /* Light pink background color */
+    font-family: Arial, sans-serif; /* Adding a font for a polished look */
+  }
+  header {
+    background-color: #4a148c; /* Pink background */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #e91e63;
+  }
+  
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: white;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  h3 {
+    color: white; 
+    font-weight: bold;
+    text-align: center; /* Center align text */
+    font-size: 2.5rem; /* Larger font size for the "Register" word */
+    margin-bottom: 20px; /* Increase spacing below */
+    margin-top: -25px; /* Move the "Register" heading slightly up */
+  }
+  p{
+   color: rgb(247, 242, 242);
+  }
+  .p-5 {
+    margin: auto;
+    width: 90%;
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners for the container */
+    text-align: center;
+  }
+  
+  .btn {
+    background-color: #f06292; /* Bright pink background */
+    color: #fff; /* White text color */
+    border-radius: 30px; /* More rounded for a prominent look */
+    padding: 12px 80px; /* Increased padding for a larger button */
+    border: none; /* No border */
+    font-size: 1.1rem; /* Slightly larger font size */
+    font-weight: bold; /* Bold text for emphasis */
+    margin-top: 20px; /* Add spacing above the button */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition effects */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .btn:hover {
+    background-color: #c2185b; /* Darker pink shade on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+  }
+  
+  .btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.3); /* Light pink shadow for focus effect */
+  }
+  
+  #register-container {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: linear-gradient(135deg, #f06292, #4a148c);
+  background-size: cover;
+  background-position: center;
+  }
+  
+  #register-container .card {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+}
+
+  #register-container .card-body {
+    padding: 2rem;
+  }
+  
+  
+  #register-route {
+    cursor: pointer;
+    color: #e91e63; /* Pink color for the return to login link */
+    text-align: center; /* Center align the link */
+    display: block; /* Ensures the link takes up full width */
+    margin-top: 10px; /* Add some spacing above */
+  }
+  
+  #register-route:hover {
+    cursor: pointer;
+  }
+  
+  .account-block .overlay {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(252, 251, 251, 0.4);
+    border-radius: 20px; /* Matching the container's style */
+  }
+  
+  .text-theme {
+    color: #e91e63 !important;
+  }
+  
+  .btn-theme {
+    background-color: #e91e63;
+    border-color: #e91e63;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+  }
+  
+  /* Container for form groups to move the label above the input field */
+  .form-group {
+    margin-bottom: 1rem; /* Space between form groups */
+}
+  /* Style for form labels */
+  .form-group label {
+    color: #fff; /* White color for labels */
+  display: block; /* Ensures labels are on their own line */
+  margin-bottom: 0.5rem; /* Space between label and control */
+}
+  /* Style for form controls */
+  .form-control {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white input background */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px;
+  padding: 0.5rem 1rem; /* Increased padding for better touch */
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-left: 0; /* Remove left margin to align with label */
+  width: 100%; /* Adjust to fill container width */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+  
+  /* Focus state for form controls */
+  .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    box-shadow: none;
+  }
+  
+  

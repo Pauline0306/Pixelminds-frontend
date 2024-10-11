@@ -1,0 +1,104 @@
+
+.feed-container {
+  background: linear-gradient(135deg, #f06292, #4a148c); /* Matching gradient background */
+  margin: 1rem 0;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+}
+
+.feed-posts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feed-item {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#fullname {
+  color: #fff; /* White color for author name */
+}
+
+#date {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7); /* Light white for date */
+}
+
+.profile-pic-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+}
+
+.post-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fff; /* White color for title */
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.post-content {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7); /* Light white for post content */
+  font-family: Arial, sans-serif;
+}
+
+.read-more-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #f06292; /* Match button with login page */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.read-more-button:hover {
+  background-color: #d81b60; /* Darker pink on hover */
+  transform: scale(1.05);
+}
+
+.read-more-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 140, 140, 0.5);
+}
+
+.read-more-button:active {
+  background-color: #ff4d4d; /* Slightly darker pink on click */
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.close-button {
+  color: #f06292; /* Match close button color */
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #d81b60; /* Darker pink on hover */
+}

@@ -1,0 +1,21 @@
+<h1>Admin - Posts</h1>
+
+<div class="feed-container">
+  <div class="feed-item" *ngFor="let post of posts">
+    <div class="feed-header">
+      <div class="author-info">
+        <p id="fullname">{{ post.user_fullname }}</p>
+        <p id="date">{{ post.created_at | date : "short" }}</p>
+      </div>
+    </div>
+    <div class="feed-body">
+      <p class="post-title">{{ post.title }}</p>
+      <hr />
+      <div class="feed-actions">
+        <button (click)="deletePost(post.id)" class="delete-btn">
+          Delete Post
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

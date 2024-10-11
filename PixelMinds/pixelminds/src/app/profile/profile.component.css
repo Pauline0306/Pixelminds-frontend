@@ -1,0 +1,136 @@
+
+.header {
+  background-color: #4a148c; /* Consistent pink background */
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 15px;
+}
+
+.header-right button {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.header-right button:hover {
+  color: rgba(255, 255, 255, 0.7); /* Light white on hover */
+}
+
+/* Profile Container with Centered Layout */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f06292, #4a148c); /* Pink gradient background */
+  border-radius: 15px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Profile Picture */
+.profile-picture {
+  margin-bottom: 20px;
+}
+
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Form Content */
+.profile-content {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1rem; /* Space between form groups */
+}
+
+.form-group label {
+  color: #030303; /* White color for labels */
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white input background */
+  color: #fff; /* White text */
+  border: none; /* No border */
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-left: 0;
+  width: 100%; /* Fill container width */
+  box-sizing: border-box;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Light white for placeholder */
+}
+
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.3); /* Slightly lighter on focus */
+  outline: none;
+  box-shadow: none;
+}
+
+/* Save Button */
+.save-button {
+  background-color: #f06292; /* Pink background color */
+  color: #131212;
+  border-radius: 30px;
+  padding: 12px 25px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  width: 100%; /* Full width button */
+}
+
+.save-button:hover {
+  background-color: #d81b60; /* Darker pink on hover */
+  transform: scale(1.05); /* Slight enlarge on hover */
+}
+
+p.text-muted {
+  color: black
+}
+
+a {
+  color: #f06292; /* Pink color for links */
+}
+
+a:hover {
+  color: #d81b60; /* Darker pink on hover */
+  text-decoration: underline;
+}

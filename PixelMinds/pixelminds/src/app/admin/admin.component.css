@@ -1,0 +1,59 @@
+.feed-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .feed-item {
+    background-color: #fafafa;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px #00000040;
+    margin: 1rem;
+    width: 16rem;
+  }
+  
+  /* Feed Info */
+  .author-info {
+    display: flex;
+  
+    #fullname {
+      color: #457b9d;
+      padding: 0 0.5rem 0 0;
+    }
+  
+    #date {
+      font-size: 0.65rem;
+      align-self: center;
+    }
+  }
+  
+  .feed-body {
+    /* Title */
+    .post-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1d3557;
+    }
+  
+    .delete-btn {
+      padding: 0.4rem 1.2rem;
+      border: none;
+      box-shadow: 0px 4px 4px #00000040;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      background-color: #e63946;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+  
+    .delete-btn:hover {
+      background-color: #f85260;
+    }
+  }
+  
+  .feed-actions {
+    display: flex;
+    justify-content: center;
+  }
+  

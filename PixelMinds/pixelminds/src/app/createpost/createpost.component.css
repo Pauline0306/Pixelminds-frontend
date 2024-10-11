@@ -1,0 +1,166 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: linear-gradient(135deg, #f06292, #4a148c);
+  background-size: cover;
+  background-position: center; 
+}
+
+.header {
+  background-color: #4a148c; /* Consistent pink background */
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 15px;
+}
+
+.header-right button {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.header-right button:hover {
+  color: rgba(255, 255, 255, 0.7); /* Light white on hover */
+}
+
+#container {
+  width: 60%;
+  max-width: 800px;
+  margin: 100px auto; /* Center horizontally and account for fixed header */
+  padding: 2rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f06292, #4a148c); /* Semi-transparent white */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  margin-top: 100px;
+}
+
+#header {
+  margin-bottom: 1rem;
+}
+
+.title h3 {
+  font-family: Georgia, serif;
+  margin: 0;
+  color: #ffffff; /* Matching color to the header */
+  display: flex;
+  font-size: 40px;
+  text-align: center;
+}
+
+.quill-container {
+  position: relative; /* Ensure positioning context for toolbar */
+}
+
+.ql-toolbar {
+  position: fixed; /* Fix the toolbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the container */
+  background: #ffffff; /* Background color to match the form */
+  z-index: 1000; /* Ensure it's above other elements */
+  border-bottom: 1px solid #ddd; /* Optional: border for better separation */
+}
+
+.ql-editor {
+  margin-top: 44px; /* Adjust this value based on the toolbar height */
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.create-post-form-wrapper {
+  padding: 1rem 0;
+}
+
+.create-post-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.create-post-form .form-group input,
+.create-post-form .form-group textarea,
+.create-post-form .form-group quill-editor {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #4a148c;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #4a148c;
+}
+
+.create-post-form .form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.create-post-form .form-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.create-post-form .form-btn .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #f06292; /* Pink background */
+  color: white;
+  border: 2px solid #f06292; /* Border to define the button */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.create-post-form .form-btn .btn:hover {
+  background-color: #d81b60; /* Darker pink on hover */
+  border-color: #d81b60;
+
+}
+
+.create-post-form .form-btn .btn:focus{
+  background-color: #d81b60; /* Darker pink on hover */
+  border-color: #d81b60;
+}
+
+.file-upload-label {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #f06292; /* Pink background */
+  color: white;
+  border: 2px solid #f06292; /* Border to define the button */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-upload-label:hover {
+  background-color: #d81b60; /* Darker pink on hover */
+  transform: scale(1.05);
+}
+
+.file-upload-label span {
+  color: #6a1b9a;
+  text-decoration: underline;
+}

@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div class="posts-divider">
+    <div class="feed-container">
+      <div class="feed-item" *ngFor="let post of filteredPosts">
+        <img src="/assets/fast.jpeg">
+        <div class="feed-holder">
+          <div class="feed-header">
+            <div class="author-info">
+              <p id="fullname">{{ post.user_fullname }}</p>
+              <p id="date">{{ post.created_at | date : "short" }}</p>
+              <p *ngIf="post.edited">Edited</p>
+              <div class="crud-actions" *ngIf="!post.isEditing && showEditCrud">
+                <i (click)="editPost(post)" class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+            </div>
+          </div>
+          <div class="feed-body" *ngIf="!post.isEditing">
+            <p class="post-title">{{ post.title }}</p>
+            <hr />
+            <p class="post-content" [innerHTML]="post.content"></p>
+          </div>
+          <div class="feed-body" *ngIf="post.isEditing">
+            <form (ngSubmit)="saveEdit(post)">
+              <div id="title-div">
+                <label for="title">Title:</label><br />
+                <input id="title" [(ngModel)]="post.title" name="title" required />
+              </div>
+              <div id="content-div">
+                <label for="content">Description:</label><br />
+                <textarea
+                  id="content"
+                  [(ngModel)]="post.content"
+                  name="content"
+                  required
+                ></textarea>
+              </div>
+              <div class="feed-actions">
+                <button type="button" (click)="cancelEdit(post)">Cancel</button>
+                <button class="delete-btn" (click)="deletePost(post.id)">Delete</button>
+                <button class="save-btn" type="submit">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="months-container">
+      <ul class="filterMonths">
+        <li *ngFor="let month of months; let i = index" (click)="filterPostsByMonth(i + 1)">
+          {{ month }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  
